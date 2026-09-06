@@ -1,13 +1,13 @@
 import javax.swing.*; 
 import java.awt.*; 
 
-public class Main extends JFrame {
+public class main extends JFrame {
     private JTextField txtNombre, txtPrecio, txtStock;
     private JButton btnRegistrar;
     private JTextArea txtResultado;
 
 
-    public Main() {
+    public main() {
         setTitle("Sistema de Productos"); 
         setSize(400, 400); 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
@@ -45,10 +45,10 @@ public class Main extends JFrame {
         double precio = Double.parseDouble(txtPrecio.getText()); 
         int stock = Integer.parseInt(txtStock.getText()); 
 
-        Producto producto = new Producto(nombre, precio, stock); 
+        producto producto = new producto(nombre, precio, stock); 
         txtResultado.setText(producto.mostrarInformacion()); 
     }
     public static void main(String[] args) {
-        new Main(); 
+        new main(); 
     }
 }
