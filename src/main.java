@@ -48,8 +48,8 @@ public class main extends JDialog {
         String carrera = txtCarrera.getText(); 
         String curso = txtCurso.getText(); 
 
-        producto producto = new producto(nombre, carrera, curso); 
-        txtResultado.setText(producto.mostrarInformacion()); 
+        alumno alumno = new alumno(nombre, carrera, curso); 
+        txtResultado.setText(alumno.mostrarInformacion()); 
     }
     public static void main(String[] args) {
         new main(); 
