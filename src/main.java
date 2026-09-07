@@ -12,7 +12,7 @@ public class main extends JDialog {
         setSize(420, 380); 
         setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE); 
         setLocationRelativeTo(null); 
-        getContentPane().setBackground(new Color(130, 200, 155));
+        getContentPane().setBackground(new Color(230, 240, 255));
 
         JLabel lblNombre = new JLabel("Nombre:");
         JLabel lblCarrera = new JLabel("Carrera");
@@ -22,7 +22,7 @@ public class main extends JDialog {
         txtCarrera = new JTextField();
         txtCurso = new JTextField();
         btnRegistrar = new JButton("REGISTRAR"); 
-        btnRegistrar.setBackground(new Color(130, 170, 250));
+        btnRegistrar.setBackground(new Color(70, 130, 180));
         btnRegistrar.setForeground(Color.WHITE);
         txtResultado = new JTextArea(); 
         txtResultado.setEditable(false); 
@@ -47,7 +47,15 @@ public class main extends JDialog {
         String nombre = txtNombre.getText(); 
         String carrera = txtCarrera.getText(); 
         String curso = txtCurso.getText(); 
-
+        if (nombre.isEmpty() || carrera.isEmpty() || curso.isEmpty()) {
+        JOptionPane.showMessageDialog(
+            this,
+            "Por favor, complete todos los campos.",
+            "Datos incompletos",
+            JOptionPane.WARNING_MESSAGE
+        );
+        return;
+    }
         alumno alumno = new alumno(nombre, carrera, curso); 
         txtResultado.setText(alumno.mostrarInformacion()); 
     }
