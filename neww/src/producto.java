@@ -1,29 +1,29 @@
 public class producto {
     private String nombre;
-    private double precio;
-    private int stock;
+    private String carrera;
+    private String curso;
 
-    public producto(String nombre, double precio, int stock) {
-        this.nombre = nombre; 
-        this.precio = precio; 
-        this.stock = stock; 
+    public producto(String nombre, String carrera, String curso) {
+        this.nombre = nombre;
+        this.carrera = carrera;
+        this.curso = curso;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public double getPrecio() {
-        return precio;
+    public String getCarrera() {
+        return carrera;
     }
 
-    public int getStock() {
-        return stock;
+    public String getCurso() {
+        return curso;
     }
 
     public String mostrarInformacion() {
-        return "Producto: " + nombre +
-               "\nPrecio: $" + precio +
-               "\nStock: " + stock;
+        return "Alumno: " + nombre +
+               "\nCarrera: " + carrera +
+               "\nCurso: " + curso;
     }
 }
