@@ -9,9 +9,10 @@ public class main extends JDialog {
 
     public main() {
         setTitle("Registro de alumnos LSI:"); 
-        setSize(400, 400); 
+        setSize(420, 380); 
         setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE); 
         setLocationRelativeTo(null); 
+        getContentPane().setBackground(new Color(130, 200, 155));
 
         JLabel lblNombre = new JLabel("Nombre:");
         JLabel lblCarrera = new JLabel("Carrera");
@@ -20,11 +21,13 @@ public class main extends JDialog {
         txtNombre = new JTextField();
         txtCarrera = new JTextField();
         txtCurso = new JTextField();
-        btnRegistrar = new JButton("Registrar"); 
+        btnRegistrar = new JButton("REGISTRAR"); 
+        btnRegistrar.setBackground(new Color(130, 170, 250));
+        btnRegistrar.setForeground(Color.WHITE);
         txtResultado = new JTextArea(); 
         txtResultado.setEditable(false); 
 
-        setLayout(new GridLayout(5, 2, 10, 10));
+        setLayout(new GridLayout(5, 2, 20, 10));
         add(lblNombre); 
         add(txtNombre); 
         add(lblCarrera); 
